@@ -147,15 +147,7 @@ export class MyTelInput
     @Optional() @Self() public ngControl: NgControl
   ) {
     this.parts = formBuilder.group({
-      area: [
-        null,
-        [
-          Validators.nullValidator,
-          Validators.required,
-          Validators.minLength(3),
-          Validators.maxLength(3),
-        ],
-      ],
+      area: ['',[],],
       exchange: [ null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)],
       ],
       subscriber: [
